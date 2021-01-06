@@ -1,7 +1,12 @@
 package ru.skorokhod.springcourse.models;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 public class Person {
     private int id;
+    @NotEmpty(message = "Name required")
+    @Size(min = 0)
     private String name;
 
     public Person() {
